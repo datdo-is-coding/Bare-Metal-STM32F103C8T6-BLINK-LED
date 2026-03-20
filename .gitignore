@@ -1,10 +1,2 @@
-led.c 
-led.h
-main.c 
-main.h
-main.o
-main.log
-stm32_ls.ld 
-stm32_startup.c
 *.o
 *.elf
