@@ -15,7 +15,6 @@ extern uint32_t _estack;
 
 #define RESERVED 0
 
-extern void __libc_init_array(void);
 extern int main(void);
 
 
@@ -37,8 +36,6 @@ void Reset_Handler(void){
     while(dst < (uint32_t*) &_ebss){
         *dst++ = 0;
     }
-
-    __libc_init_array();
 
     main();
     while (1);
