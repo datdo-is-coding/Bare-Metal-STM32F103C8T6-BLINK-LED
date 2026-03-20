@@ -41,6 +41,7 @@ void Reset_Handler(void){
     __libc_init_array();
 
     main();
+    while (1);
 }
 
 /*
