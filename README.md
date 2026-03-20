@@ -23,9 +23,13 @@ The goal is to understand low-level embedded system concepts, including
 
 # Project Structure
 ├── main.c # Application code (LED blink)
+
 ├── stm32f103_startup.c # Startup code + vector table
+
 ├── stm32f103_ls.ld # Linker script
+
 ├── Makefile # Build system
+
 ├── final.elf # Output ELF (after build)
 
 # How to build this project
@@ -75,8 +79,12 @@ We have a custom layout (no heap because there is no standard lib)
 - .bss  (zerod-initialized globals)
 - .stack (grows downward, the top of the stack is the end of SRAM)
 
+## 3. Blinking LED
+- Direct access to register using struct
+
 # Resources
 [How to build bare-metal project from ground up](https://www.youtube.com/playlist?list=PLERTijJOmYrDiiWd10iRHY0VRHdJwUH4g)
+
 [STM32F10x Reference Manual](https://www.st.com/resource/en/reference_manual/rm0008-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf)
 
 
